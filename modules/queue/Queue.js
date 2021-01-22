@@ -57,6 +57,16 @@ class Queue {
       }
       console.log(result.join(', '));
   }
+
+  toArray() {
+      let result = [];
+      let node = this.first;
+      while(node !== null) {
+          result.push(node.value);
+          node = node.next;
+      }
+      return result;
+  }
 }
 
 module.exports = Queue;

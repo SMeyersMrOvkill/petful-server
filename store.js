@@ -2,7 +2,40 @@ module.exports = {
   people: [
     'Randy Lahey',
     'Trevor Cory',
-    'Jim Lahey'
+    'Jim Lahey',
+  ],
+
+  randomPeople: [
+    'Some Dude',
+    'Some Chick',
+    'Other Dude',
+    'Other Chick',
+    'Third Dude',
+    'Third Chick',
+    'Fourth Dude',
+    'Fourth Chick',
+    'Happy Man',
+    'Happy Lady',
+    'Sad Man',
+    'Sad Lady',
+    'Cube Man',
+    'Cube Woman',
+    'Upside-down Man',
+    'Upside-down Woman',
+    'Scary Clown',
+    'Alex Alexson',
+    'Your Mother',
+    'Your BrothaFromAnothaMutha',
+    'Joe Turner',
+    'Samuel Meyers',
+    'Game Theory',
+    'Alexa Alexason',
+    'Dirk Wiebel',
+    'Alanna Ellis',
+    'Elijah Simpson',
+    'Jessica Baskerville',
+    'Cyd La Luz',
+    'Slack Bot'
   ],
 
   dogs: [

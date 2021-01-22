@@ -23,7 +23,7 @@ router.delete('/', json, (req, res) => {
   if(!type) {
     return res.status(400).json({status: -1});
   }
-  if(type.toLowerCase() !== 'dog' && type.toLowerCase() !== 'cat') {
+  if(type.toLowerCase() !== 'dog' && type.toLowerCase() !== 'cat' && type.toLowerCase() !== 'dogcat') {
     return res.status(400).json({status: -2});
   }
   Pets.dequeue(type);

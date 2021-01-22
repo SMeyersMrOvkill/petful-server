@@ -1,5 +1,6 @@
 const Queue = require('../queue/Queue')
 const store = require('../../store')
+const { randomPeople } = require('../../store')
 
 // Set up initial data.
 // --------------------
@@ -9,16 +10,27 @@ store.people.forEach(person => people.enqueue(person))
 
 // --------------------
 
+function selectRandomPerson() {
+  const index = Math.floor(Math.random() * store.randomPeople.length);
+  return store.randomPeople[index];
+}
+
 module.exports = {
   get() {
-    // Return all people in the queue.
+    return people.toArray();
   },
 
   enqueue(person) {
-    // Add a person to the queue.
+    people.enqueue(person);
+  },
+
+  enqueueRandom() {
+    const person = selectRandomPerson();
+    people.enqueue(person);
+    return person;
   },
 
   dequeue() {
-    // Remove a person from the queue.
+    people.dequeue();
   }
 }

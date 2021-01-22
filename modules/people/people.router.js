@@ -6,11 +6,22 @@ const People = require('./people.service')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  // Return all the people currently in the queue.
+  return res.json(People.get());
+})
+
+router.get('/minusone', (req, res) => {
+  People.dequeue();
+  return res.json(People.get());
 })
 
 router.post('/', json, (req, res) => {
-  // Add a new person to the queue.
+  const { person } = req.body;
+  if(!person) {
+    const newPerson = People.enqueueRandom();
+    return res.json({message: 'Queued a random person', person: newPerson});
+  }
+  People.enqueue(person);
+  return res.json({message: 'Added ' + person})
 })
 
 module.exports = router

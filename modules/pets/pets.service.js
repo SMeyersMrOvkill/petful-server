@@ -35,7 +35,10 @@ module.exports = {
       pets.dogs.dequeue();
     } else if(type.toLowerCase() === 'cat') {
       pets.cats.dequeue();
-    } else {
+    } else if (type.toLowerCase() === 'dogcat') {
+      pets.dogs.dequeue();
+      pets.cats.dequeue();
+    }else {
       console.log('Error: We only have cats and dogs. [' + type + ']');
     }
   }
