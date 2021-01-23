@@ -67,6 +67,16 @@ class Queue {
       }
       return result;
   }
+
+  length() {
+      let count = 0;
+      let node = this.first;
+      while(node !== null) {
+          count++;
+          node = node.next;
+      }
+      return count;
+  }
 }
 
 module.exports = Queue;

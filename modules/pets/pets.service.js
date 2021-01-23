@@ -41,5 +41,9 @@ module.exports = {
     }else {
       console.log('Error: We only have cats and dogs. [' + type + ']');
     }
+    if(pets.dogs.length() === 0 || pets.dogs.length === 0) {
+      store.dogs.forEach(dog => pets.dogs.enqueue(dog))
+      store.cats.forEach(cat => pets.cats.enqueue(cat))
+    }
   }
 }
